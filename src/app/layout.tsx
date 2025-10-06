@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 // ✅ SEO & Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.example"), // Replace later with your deployed domain
+  metadataBase: new URL("https://my-portfolio-tau-cyan-98.vercel.app/"), // Replace later with your deployed domain
   title: {
     default: "Min Soe — Portfolio",
     template: "%s · Min Soe",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Graduate Data/Software professional in Hamilton, NZ. I build clean data pipelines & web apps.",
   openGraph: {
     type: "website",
-    url: "https://yourdomain.example",
+    url: "https://my-portfolio-tau-cyan-98.vercel.app/",
     title: "Min Soe — Portfolio",
     description:
       "Graduate Data/Software professional in Hamilton, NZ. I build clean data pipelines & web apps.",
