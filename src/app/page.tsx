@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@iconify/react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -592,9 +593,8 @@ const items = [
 
     {/* ---- Row 1 ---- */}
     <div className="flex flex-wrap justify-center gap-8">
-      <div className="group flex flex-col items-center gap-2 w-24">
-      <span className="iconify text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"
-          data-icon="simple-icons:microsoftazure" />
+      <div className="flex flex-col items-center gap-2 w-24">
+        <Icon icon="simple-icons:microsoftazure" className="text-5xl text-amber-400" />
         <span className="text-xs text-neutral-300">Azure</span>
       </div>
       <div className="group flex flex-col items-center gap-2 w-20">
@@ -697,26 +697,23 @@ const items = [
   {/* Divider (amber) */}
 <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-400/70 to-transparent"></div>
 
-{/* ---- NEW Bottom Row: Revit / AutoCAD / Dynamo ---- */}
+{/* ---- Bottom Row: Revit / AutoCAD / Dynamo ---- */}
 <div className="flex flex-wrap justify-center gap-8">
   {/* Revit (Iconify) */}
-  <div className="group flex flex-col items-center gap-2 w-20">
-    <span className="iconify text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"
-          data-icon="simple-icons:autodeskrevit" />
+  <div className="flex flex-col items-center gap-2 w-24">
+    <Icon icon="simple-icons:autodeskrevit" className="text-5xl text-sky-400" />
     <span className="text-xs text-neutral-300">Revit</span>
   </div>
 
   {/* AutoCAD (Iconify or Devicon; Iconify is more reliable) */}
-  <div className="group flex flex-col items-center gap-2 w-20">
-    <span className="iconify text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"
-          data-icon="simple-icons:autocad" />
+  <div className="flex flex-col items-center gap-2 w-24">
+    <Icon icon="simple-icons:autocad" className="text-5xl text-amber-400" />
     <span className="text-xs text-neutral-300">AutoCAD</span>
   </div>
 
   {/* Dynamo (Iconify – using Autodesk brand if Dynamo icon is unavailable) */}
-  <div className="group flex flex-col items-center gap-2 w-20">
-    <span className="iconify text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"
-          data-icon="simple-icons:autodesk" />
+  <div className="flex flex-col items-center gap-2 w-24">
+    <Icon icon="simple-icons:autodesk" className="text-5xl text-sky-400" />
     <span className="text-xs text-neutral-300">Dynamo</span>
   </div>
 </div>
