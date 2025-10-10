@@ -17,8 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 /* ===== Body ===== */
 body {
   @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 transition-colors duration-300;
