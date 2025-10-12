@@ -79,7 +79,7 @@ const items = [
         </div>
       </header>
 
-      {/* HERO (directly below navbar) */}
+      {/* HERO*/}
       <section
         id="home"
         className="min-h-[70vh] flex flex-col-reverse md:flex-row-reverse items-center justify-center px-6 md:px-12 gap-10 pt-8">
@@ -142,14 +142,14 @@ const items = [
             <Linkedin size={24} className="text-amber-400" />
           </a>
 
-          {/* GitLab */}
+          {/* GitHub */}
           <a
-            href="https://gitlab.com/minsoehtut306"
+            href="https://github.com/minsoehtut306"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_15px_2px_rgba(251,191,36,0.3)] transition"
-            aria-label="GitLab Profile"
-            title="View my GitLab Projects"
+            aria-label="GitHub Profile"
+            title="View my GitHub Projects"
           >
             <Github size={24} className="text-amber-400" />
           </a>
@@ -468,6 +468,29 @@ const items = [
         </a>
       </div>
 
+      {/* Portfolio Website */}
+      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
+        <h3 className="text-xl font-semibold mb-2 text-sky-400">
+          Portfolio Website (Next.js + Tailwind)
+        </h3>
+        <p className="text-sm text-neutral-300 mb-3">
+          A personal portfolio website built with Next.js and Tailwind CSS to showcase my journey, projects,
+          and technical skills. Features a responsive dark theme, animated sections, and custom icon system.
+        </p>
+        <p className="text-xs text-neutral-400 mb-4">
+          Tech: Next.js, React, Tailwind CSS, Framer Motion, TypeScript
+        </p>
+        <a
+          href="https://github.com/minsoehtut306/my-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-auto px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium shadow-[0_0_16px_2px_rgba(56,189,248,0.25)] transition"
+        >
+          View on GitHub →
+        </a>
+      </div>
+
+
     {/* Network File Transfer */}
       <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
         <h3 className="text-xl font-semibold mb-2 text-amber-400">
@@ -593,8 +616,11 @@ const items = [
 
     {/* ---- Row 1 ---- */}
     <div className="flex flex-wrap justify-center gap-8">
-      <div className="flex flex-col items-center gap-2 w-24">
-        <Icon icon="simple-icons:microsoftazure" className="text-5xl text-amber-400" />
+
+    <div className="group flex flex-col items-center gap-2 w-24">
+      <Icon
+        icon="simple-icons:microsoftazure"
+        className="text-5xl text-amber-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"/>
         <span className="text-xs text-neutral-300">Azure</span>
       </div>
       <div className="group flex flex-col items-center gap-2 w-20">
@@ -631,7 +657,7 @@ const items = [
       </div>
     </div>
 
-    {/* Divider (sky) */}
+    {/* Divider*/}
     <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent"></div>
 
     {/* ---- Row 2 ---- */}
@@ -666,7 +692,7 @@ const items = [
       </div>
     </div>
 
-    {/* Divider (amber) */}
+    {/* Divider*/}
     <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-400/70 to-transparent"></div>
 
     {/* ---- Row 3 ---- */}
@@ -694,26 +720,27 @@ const items = [
     </div>
   </div>
 
-  {/* Divider (amber) */}
+  {/* Divider*/}
 <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-400/70 to-transparent"></div>
 
-{/* ---- Bottom Row: Revit / AutoCAD / Dynamo ---- */}
+{/* ---- Row 4 ---- */}
 <div className="flex flex-wrap justify-center gap-8">
-  {/* Revit (Iconify) */}
-  <div className="flex flex-col items-center gap-2 w-24">
-    <Icon icon="simple-icons:autodeskrevit" className="text-5xl text-sky-400" />
+  <div className="group flex flex-col items-center gap-2 w-24">
+    <Icon
+      icon="simple-icons:autodeskrevit"
+      className="text-5xl text-amber-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"/>
     <span className="text-xs text-neutral-300">Revit</span>
   </div>
-
-  {/* AutoCAD (Iconify or Devicon; Iconify is more reliable) */}
-  <div className="flex flex-col items-center gap-2 w-24">
-    <Icon icon="simple-icons:autocad" className="text-5xl text-amber-400" />
+  <div className="group flex flex-col items-center gap-2 w-24">
+    <Icon
+      icon="simple-icons:autocad"
+      className="text-5xl text-sky-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)]"/>
     <span className="text-xs text-neutral-300">AutoCAD</span>
   </div>
-
-  {/* Dynamo (Iconify – using Autodesk brand if Dynamo icon is unavailable) */}
-  <div className="flex flex-col items-center gap-2 w-24">
-    <Icon icon="simple-icons:autodesk" className="text-5xl text-sky-400" />
+  <div className="group flex flex-col items-center gap-2 w-24">
+    <Icon
+      icon="simple-icons:autodesk"
+      className="text-5xl text-amber-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"/>
     <span className="text-xs text-neutral-300">Dynamo</span>
   </div>
 </div>
@@ -757,14 +784,14 @@ const items = [
       <Linkedin size={30} className="text-amber-400" />
     </a>
 
-    {/* GitLab */}
+    {/* GitHub */}
     <a
-      href="https://gitlab.com/minsoehtut306"
+      href="https://github.com/minsoehtut306"
       target="_blank"
       rel="noopener noreferrer"
       className="p-4 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_20px_2px_rgba(251,191,36,0.3)] transition"
-      aria-label="GitLab Profile"
-      title="View my GitLab Projects"
+      aria-label="GitHub Profile"
+      title="View my GitHub Projects"
     >
       <Github size={30} className="text-amber-400" />
     </a>
