@@ -20,6 +20,7 @@ const items = [
   { href: "#home", label: "Home" },
   { href: "#journey", label: "Journey" },
   { href: "#projects", label: "Projects" },
+  { href: "#Skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -101,16 +102,20 @@ const items = [
           </h1>
 
           <p className="mt-4 text-lg text-neutral-300 leading-relaxed">
-            Data & Software professional based in Hamilton, New Zealand.
-            I build efficient databases, clean data pipelines, and modern web apps.
-            I care about clarity, performance, and shipping production-ready code.
-          </p>
-
+            Fresh graduate from the <span className="text-amber-400 font-semibold">University of Waikato </span> 
+            with a Bachelor of Science majoring in <span className="text-sky-400 font-semibold">Computer Science</span>. 
+            I am passionate about improving my skills across software development, database management, data analytics, 
+            network, and cloud systems. I enjoy building <span className="text-amber-400">full-stack applications </span> 
+            using modern, interactive tools and writing clean, well-structured code that follows consistent development 
+            standards and best practices. With a background in <span className="text-sky-400">Civil & Structural Engineering </span> 
+            and <span className="text-amber-400">Operations Management</span>, I’m eager to contribute to opportunities that merge 
+            technology, problem-solving, and innovation.
+            </p>
           {/* Buttons */}
           <div className="mt-7 flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href="#journey"
-              className="px-5 py-2.5 rounded-lg border border-neutral-600 hover:border-amber-400 text-neutral-200 hover:text-amber-400 transition"
+              className="px-5 py-2.5 rounded-lg border border-neutral-600 hover:border-sky-400 text-neutral-200 hover:text-amber-400 transition"
             >
               Know more →
             </a>
@@ -160,18 +165,12 @@ const items = [
 {/* JOURNEY */}
 <section id="journey" className="py-20 bg-neutral-900 border-t border-neutral-800">
   <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">
-      Journey
-    </h2>
+    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">Journey</h2>
+
     {/* Timeline wrapper */}
     <div className="relative">
       {/* Timeline line (mobile: left, md+: center) */}
-      <div
-        className="
-          absolute top-0 h-full w-[2px] bg-amber-400/25
-          left-6 md:left-1/2 md:-translate-x-1/2
-        "
-      />
+      <div className="absolute top-0 h-full w-[2px] bg-amber-400/25 left-6 md:left-1/2 md:-translate-x-1/2" />
 
       {[
         {
@@ -180,23 +179,54 @@ const items = [
           place: "University of Waikato, New Zealand",
           period: "2023 – 2025",
           details:
-            "Focused on Database Systems, Data Analytics, and Software Engineering.",
+            "Focused on Networking, Software Engineering, Database Systems, and Data Analytics.",
+          papersByYear: {
+            "2025": [
+              "COMPX278 Technology and Complex Problems",
+              "COMPX301 Design and Analysis of Algorithms",
+              "COMPX323 Advanced Database Concepts",
+              "COMPX341 Software Engineering Methods",
+              "HECSS363 The Impact Lab",
+            ],
+            "2024": [
+              "COMPX201 Data Structures and Algorithms",
+              "COMPX202 Mobile Computing and Software Architecture",
+              "COMPX203 Computer Systems",
+              "COMPX204 Practical Networking and Cyber Security",
+              "COMPX216 Artificial Intelligence",
+              "COMPX223 Database Practice and Experience",
+              "COMPX251 Applied Computing Tools 1",
+              "COMPX310 Machine Learning",
+              "COMPX361 Logic and Computation",
+              "PRMGT200 Fundamentals of Operations and Project Management",
+            ],
+            "2023": [
+              "COMPX101 Introduction to Programming",
+              "COMPX102 Object-Oriented Programming",
+              "CSMAX170 Foundations in Computing and Mathematical Sciences",
+              "CSMAX270 Cultural Perspectives for Computing and Mathematical Sciences",
+              "DATAX121 Introduction to Statistical Methods",
+              "DIGIB101 The World of Digital Business",
+              "MATHS135 Discrete Structures",
+              "MATHS165 General Mathematics",
+              "MEDIA309 Game, Play and Society",
+            ],
+          },
         },
         {
           type: "edu",
           title: "Higher Diploma in Ethical Hacking & Forensic Investigations",
-          place: "MDIS / Teesside University, UK",
+          place: "MDIS Singapore — Awarded by Teesside University, UK",
           period: "2022 – 2023",
-          details:
-            "Specialized in cybersecurity, ethical hacking, and digital forensics.",
+          details: "Specialized in cybersecurity, ethical hacking, and digital forensics.",
         },
         {
           type: "work",
           title: "Operation Director",
-          place: "Myan Pyi Kyaw Kyar Co., Ltd",
+          place: "Myan Pyi Kyaw Kyar Co., Ltd, Myanmar",
           period: "2020 – 2022",
           details:
-            "Directed motel & construction operations, managed workers, ensured deadlines & budgets, and trained staff.",
+            "Directed motel & construction operations; managed teams, budgets, and timelines; trained staff.",
         },
         {
           type: "work",
@@ -204,42 +234,41 @@ const items = [
           place: "Arup Singapore Pte Ltd",
           period: "2018 – 2020",
           details:
-            "Produced 3D BIM drawings for concrete and steel structures; modernized standard details.",
+            "Produced 3D BIM drawings for concrete/steel structures; modernized standard details.",
         },
         {
           type: "edu",
           title: "Diploma in Construction Information Technology",
           place: "BCA Academy, Singapore",
           period: "2015 – 2018",
-          details: "Integrated construction IT and BIM technologies.",
+          details:
+            "BIM-based drawings, services coordination, and data integration across design",
         },
       ].map((item, i) => {
         const isRight = i % 2 === 0;
+        const skyAccent =
+          item.title === "Operation Director" || item.title === "Assistant BIM Technician";
         return (
           <div
             key={i}
             className="
-              relative
-              mb-14 md:mb-16
+              relative mb-14 md:mb-16
               grid grid-cols-[24px,1fr]
               md:grid-cols-2 md:items-center
             "
           >
             {/* DOT on the line */}
-              <span
-                className={`
-                  absolute z-10 rounded-full w-3.5 h-3.5
-                  ${
-                    item.title === "Operation Director" || item.title === "Assistant BIM Technician"
-                      ? "bg-sky-400 ring-4 ring-sky-400/20 shadow-[0_0_18px_2px_rgba(56,189,248,0.4)]"
-                      : "bg-amber-400 ring-4 ring-amber-400/20 shadow-[0_0_18px_2px_rgba(251,191,36,0.35)]"
-                  }
-                  transition
-                  left-6 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2
-                  md:top-1/2 md:-translate-y-1/2
-                `}
-                aria-hidden="true"
-              />
+            <span
+              className={`
+                absolute z-10 rounded-full w-3.5 h-3.5
+                ${skyAccent
+                  ? "bg-sky-400 ring-4 ring-sky-400/20 shadow-[0_0_18px_2px_rgba(56,189,248,0.40)]"
+                  : "bg-amber-400 ring-4 ring-amber-400/20 shadow-[0_0_18px_2px_rgba(251,191,36,0.35)]"}
+                left-6 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2
+                md:top-1/2 md:-translate-y-1/2
+              `}
+              aria-hidden="true"
+            />
 
             {/* mobile spacer to push card off the line */}
             <div className="col-span-1 md:hidden" />
@@ -247,79 +276,94 @@ const items = [
             {/* CARD */}
             <div
               className={`
-                col-span-1
-                ${/* mobile: margin-left from line */""}
-                ml-6
-                ${/* md+: zig-zag left/right */""}
-                md:ml-0 md:mt-0
+                col-span-1 ml-6 md:ml-0 md:mt-0
                 ${isRight ? "md:pl-10 md:order-2" : "md:pr-10 md:order-1"}
               `}
             >
-            <div
-              className={`
-                group relative p-5 rounded-xl border bg-neutral-800/70 border-neutral-700
-                transition-shadow
-                ${
-                  item.title === "Operation Director" || item.title === "Assistant BIM Technician"
+              <div
+                className={`
+                  group relative p-5 rounded-xl border bg-neutral-800/70 border-neutral-700
+                  transition-shadow
+                  ${skyAccent
                     ? "hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)]"
-                    : "hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)]"
-                }
-              `}
-            >
-                {/* “Headlight” halo behind card */}
-                  <div
-                    className={`
-                      pointer-events-none absolute inset-0 rounded-xl
-                      before:content-[''] before:absolute before:inset-0 before:rounded-xl
-                      before:transition-opacity
-                      ${
-                        item.title === "Operation Director" || item.title === "Assistant BIM Technician"
-                          ? "before:bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.14),rgba(56,189,248,0)_60%)]"
-                          : "before:bg-[radial-gradient(ellipse_at_center,rgba(251,191,36,0.14),rgba(251,191,36,0)_60%)]"
-                      }
-                      opacity-0 group-hover:opacity-100 transition-opacity
-                    `}
-                  />
-
+                    : "hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)]"}
+                `}
+              >
+                {/* halo */}
+                <div
+                  className={`
+                    pointer-events-none absolute inset-0 rounded-xl
+                    before:content-[''] before:absolute before:inset-0 before:rounded-xl
+                    ${skyAccent
+                      ? "before:bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.14),rgba(56,189,248,0)_60%)]"
+                      : "before:bg-[radial-gradient(ellipse_at_center,rgba(251,191,36,0.14),rgba(251,191,36,0)_60%)]"}
+                    opacity-0 group-hover:opacity-100 transition-opacity
+                  `}
+                />
                 <h3
                   className={`text-lg font-semibold ${
-                    item.title === "Operation Director" ||
-                    item.title === "Assistant BIM Technician"
-                      ? "text-sky-400"
-                      : "text-neutral-100"
+                    skyAccent ? "text-sky-400" : "text-neutral-100"
                   }`}
                 >
                   {item.title}
                 </h3>
-
                 <p className="font-medium text-neutral-300">{item.place}</p>
                 <p className="text-sm text-neutral-400">{item.period}</p>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-                  {item.details}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-300">{item.details}</p>
                 <div
-                className={`mt-3 h-1 w-16 rounded ${
-                  item.title === "Operation Director" || item.title === "Assistant BIM Technician"
-                    ? "bg-sky-400/70"
-                    : "bg-amber-400/70"
-                }`}
-              />
+                  className={`mt-3 h-1 w-16 rounded ${
+                    skyAccent ? "bg-sky-400/70" : "bg-amber-400/70"
+                  }`}
+                />
+
+                {/* Papers (only for the B.Sc card) */}
+                {"papersByYear" in item && (
+                  <details className="mt-4 group/open">
+                    <summary className="cursor-pointer select-none text-sm text-neutral-300 hover:text-amber-300 transition flex items-center gap-2">
+                      <span className="inline-block h-2 w-2 rounded-full bg-amber-400/70" />
+                      Show papers
+                    </summary>
+                    <div className="mt-3 space-y-4">
+                      {Object.entries(item.papersByYear).map(([year, papers]) => (
+                        <div key={year}>
+                          <div className="text-xs uppercase tracking-wide text-neutral-400 mb-2">
+                            {year}
+                          </div>
+                          <ul className="space-y-1.5">
+                            {papers.map((p) => {
+                              const [code, ...nameParts] = p.split(" "); // separate code from name
+                              const name = nameParts.join(" ");
+                              return (
+                                <li key={p} className="flex items-baseline gap-2">
+                                  {/* code: highlighted */}
+                                  <span className="text-base font-semibold text-amber-400 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)]">
+                                    {code}
+                                  </span>
+                                  {/* hyphen */}
+                                  <span className="text-neutral-500">-</span>
+                                  {/* course name */}
+                                  <span className="text-sm text-neutral-300">{name}</span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
+                )}
               </div>
             </div>
 
-            {/* md+: invisible spacer on the opposite side to keep the center line centered */}
-            <div
-              className={`
-                hidden md:block
-                ${isRight ? "md:order-1" : "md:order-2"}
-              `}
-            />
+            {/* md+: spacer to keep center line centered */}
+            <div className={`hidden md:block ${isRight ? "md:order-1" : "md:order-2"}`} />
           </div>
         );
       })}
     </div>
   </div>
 </section>
+
 
 {/* PROJECTS */}
 <section
@@ -608,7 +652,9 @@ const items = [
 </section>
 
 {/* SKILLS */}
-<section id="skills" className="py-20 bg-neutral-900 border-t border-neutral-800">
+<section
+id="Skills"
+className="py-20 bg-neutral-900 border-t border-neutral-800">
   <div className="max-w-6xl mx-auto px-6">
     <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">
       Skills & Tools
@@ -721,7 +767,7 @@ const items = [
   </div>
 
   {/* Divider*/}
-<div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-400/70 to-transparent"></div>
+<div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent"></div>
 
 {/* ---- Row 4 ---- */}
 <div className="flex flex-wrap justify-center gap-8">
