@@ -182,34 +182,34 @@ const items = [
             "Focused on Networking, Software Engineering, Database Systems, and Data Analytics.",
           papersByYear: {
             "2025": [
-              "COMPX278 Technology and Complex Problems",
-              "COMPX301 Design and Analysis of Algorithms",
-              "COMPX323 Advanced Database Concepts",
-              "COMPX341 Software Engineering Methods",
-              "HECSS363 The Impact Lab",
+              "COMPX278 - Technology and Complex Problems",
+              "COMPX301 - Design and Analysis of Algorithms",
+              "COMPX323 - Advanced Database Concepts",
+              "COMPX341 - Software Engineering Methods",
+              "HECSS363 - The Impact Lab",
             ],
             "2024": [
-              "COMPX201 Data Structures and Algorithms",
-              "COMPX202 Mobile Computing and Software Architecture",
-              "COMPX203 Computer Systems",
-              "COMPX204 Practical Networking and Cyber Security",
-              "COMPX216 Artificial Intelligence",
-              "COMPX223 Database Practice and Experience",
-              "COMPX251 Applied Computing Tools 1",
-              "COMPX310 Machine Learning",
-              "COMPX361 Logic and Computation",
-              "PRMGT200 Fundamentals of Operations and Project Management",
+              "COMPX201 - Data Structures and Algorithms",
+              "COMPX202 - Mobile Computing and Software Architecture",
+              "COMPX203 - Computer Systems",
+              "COMPX204 - Practical Networking and Cyber Security",
+              "COMPX216 - Artificial Intelligence",
+              "COMPX223 - Database Practice and Experience",
+              "COMPX251 - Applied Computing Tools 1",
+              "COMPX310 - Machine Learning",
+              "COMPX361 - Logic and Computation",
+              "PRMGT200 - Fundamentals of Operations and Project Management",
             ],
             "2023": [
-              "COMPX101 Introduction to Programming",
-              "COMPX102 Object-Oriented Programming",
-              "CSMAX170 Foundations in Computing and Mathematical Sciences",
-              "CSMAX270 Cultural Perspectives for Computing and Mathematical Sciences",
-              "DATAX121 Introduction to Statistical Methods",
-              "DIGIB101 The World of Digital Business",
-              "MATHS135 Discrete Structures",
-              "MATHS165 General Mathematics",
-              "MEDIA309 Game, Play and Society",
+              "COMPX101 - Introduction to Programming",
+              "COMPX102 - Object-Oriented Programming",
+              "CSMAX170 - Foundations in Computing and Mathematical Sciences",
+              "CSMAX270 - Cultural Perspectives for Computing and Mathematical Sciences",
+              "DATAX121 - Introduction to Statistical Methods",
+              "DIGIB101 - The World of Digital Business",
+              "MATHS135 - Discrete Structures",
+              "MATHS165 - General Mathematics",
+              "MEDIA309 - Game, Play and Society",
             ],
           },
         },
@@ -244,7 +244,10 @@ const items = [
           details:
             "BIM-based drawings, services coordination, and data integration across design",
         },
-      ].map((item, i) => {
+      ].
+      
+      
+      map((item, i) => {
         const isRight = i % 2 === 0;
         const skyAccent =
           item.title === "Operation Director" || item.title === "Assistant BIM Technician";
@@ -316,42 +319,54 @@ const items = [
                   }`}
                 />
 
-                {/* Papers (only for the B.Sc card) */}
-                {"papersByYear" in item && (
-                  <details className="mt-4 group/open">
-                    <summary className="cursor-pointer select-none text-sm text-neutral-300 hover:text-amber-300 transition flex items-center gap-2">
-                      <span className="inline-block h-2 w-2 rounded-full bg-amber-400/70" />
-                      Show papers
-                    </summary>
-                    <div className="mt-3 space-y-4">
-                      {Object.entries(item.papersByYear).map(([year, papers]) => (
-                        <div key={year}>
-                          <div className="text-xs uppercase tracking-wide text-neutral-400 mb-2">
-                            {year}
-                          </div>
-                          <ul className="space-y-1.5">
-                            {papers.map((p) => {
-                              const [code, ...nameParts] = p.split(" "); // separate code from name
-                              const name = nameParts.join(" ");
-                              return (
-                                <li key={p} className="flex items-baseline gap-2">
-                                  {/* code: highlighted */}
-                                  <span className="text-base font-semibold text-amber-400 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)]">
-                                    {code}
-                                  </span>
-                                  {/* hyphen */}
-                                  <span className="text-neutral-500">-</span>
-                                  {/* course name */}
-                                  <span className="text-sm text-neutral-300">{name}</span>
-                                </li>
-                              );
-                            })}
-                          </ul>
+            {/* Papers (only for the B.Sc card) */}
+            {"papersByYear" in item && (
+              <details className="mt-4 group/open">
+                <summary className="cursor-pointer select-none text-sm text-neutral-300 hover:text-amber-300 transition flex items-center gap-2">
+                  <span className="inline-block h-2 w-2 rounded-full bg-amber-400/70" />
+                  Show papers
+                </summary>
+
+                <div className="mt-3 space-y-4">
+                  {(
+                    ("papersByYear" in item && item.papersByYear
+                      ? (Object.entries(item.papersByYear) as [string, string[]][])
+                      : []
+                    )
+                  )
+                    // newest year first (numeric sort)
+                    .sort(([a], [b]) => Number(b) - Number(a))
+                    .map(([year, papers]) => (
+                      <div key={year}>
+                        <div className="text-xs uppercase tracking-wide text-neutral-400 mb-2">
+                          {year}
                         </div>
-                      ))}
-                    </div>
-                  </details>
-                )}
+                        <ul className="space-y-1.5">
+                          {papers.map((raw, idx) => {
+                            // Expect "COMPX101 - Intro..." or "COMPX101 Intro..."
+                            const m = raw.match(/^([A-Z]+[A-Z0-9]+)\s*(?:-|—)?\s*(.*)$/);
+                            const code = m ? m[1] : raw;
+                            const name = m && m[2] ? m[2] : "";
+                            return (
+                              <li key={idx} className="flex items-baseline gap-2">
+                                <span className="text-base font-semibold text-sky-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)]">
+                                  {code}
+                                </span>
+                                {name && (
+                                  <>
+                                    <span className="text-neutral-500">-</span>
+                                    <span className="text-sm text-neutral-300">{name}</span>
+                                  </>
+                                )}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ))}
+                </div>
+              </details>
+            )}
               </div>
             </div>
 
