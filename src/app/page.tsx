@@ -1,9 +1,77 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
+
+// ---- Skills data helpers ----
+type Hue = "amber" | "sky";
+type Skill =
+  | { label: string; kind: "devicon"; token: string; hue?: Hue }
+  | { label: string; kind: "iconify"; token: string; hue?: Hue };
+
+const SkillBadge = ({ label, kind, token, hue = "amber" }: Skill) => {
+  const color =
+    hue === "amber"
+      ? "text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"
+      : "text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)]";
+
+  return (
+    <div className="group flex flex-col items-center gap-2 w-24">
+      {kind === "devicon" ? (
+        <i className={`${token} text-5xl ${color} transition`} />
+      ) : (
+        <Icon icon={token} className={`text-5xl ${color} transition`} />
+      )}
+      <span className="text-xs text-neutral-300">{label}</span>
+    </div>
+  );
+};
+
+// Data
+const rowLang: Skill[] = [
+  { label: "Azure", kind: "iconify", token: "simple-icons:microsoftazure" },
+  { label: "Java", kind: "devicon", token: "devicon-java-plain" },
+  { label: "C#", kind: "devicon", token: "devicon-csharp-plain" },
+  { label: "Python", kind: "devicon", token: "devicon-python-plain" },
+  { label: "JavaScript", kind: "devicon", token: "devicon-javascript-plain" },
+  { label: "TypeScript", kind: "devicon", token: "devicon-typescript-plain" },
+  { label: "SQL", kind: "devicon", token: "devicon-sqlite-plain" },
+  { label: "HTML", kind: "devicon", token: "devicon-html5-plain" },
+  { label: "CSS", kind: "devicon", token: "devicon-css3-plain" },
+  { label: "PHP", kind: "devicon", token: "devicon-php-plain" },
+];
+
+const rowStack: Skill[] = [
+  { label: ".NET", kind: "devicon", token: "devicon-dotnetcore-plain" },
+  { label: "React", kind: "devicon", token: "devicon-react-original" },
+  { label: "Node.js", kind: "devicon", token: "devicon-nodejs-plain" },
+  { label: "MongoDB", kind: "devicon", token: "devicon-mongodb-plain" },
+  { label: "Oracle", kind: "devicon", token: "devicon-oracle-original" },
+  { label: "MySQL", kind: "devicon", token: "devicon-mysql-plain" },
+  { label: "R", kind: "devicon", token: "devicon-r-plain" },
+];
+
+const rowTools: Skill[] = [
+  { label: "Visual Studio", kind: "devicon", token: "devicon-visualstudio-plain" },
+  { label: "VS Code", kind: "devicon", token: "devicon-vscode-plain" },
+  { label: "GitHub", kind: "devicon", token: "devicon-github-original" },
+  { label: "Android Studio", kind: "devicon", token: "devicon-androidstudio-plain" },
+  { label: "Unreal Engine", kind: "devicon", token: "devicon-unrealengine-original" },
+];
+
+const rowAEC: Skill[] = [
+  { label: "Revit", kind: "iconify", token: "simple-icons:autodeskrevit" },
+  { label: "AutoCAD", kind: "iconify", token: "simple-icons:autocad" },
+  { label: "Dynamo", kind: "iconify", token: "simple-icons:autodesk" },
+];
+
+// Utility to alternate colors per row
+const withAlternatingHues = (arr: Skill[]) =>
+  arr.map((s, i) => ({ ...s, hue: (i % 2 === 0 ? "amber" : "sky") as Hue }));
+
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -118,6 +186,13 @@ const items = [
               className="px-5 py-2.5 rounded-lg border border-neutral-600 hover:border-sky-400 text-neutral-200 hover:text-amber-400 transition"
             >
               Know more →
+            </a>
+
+            <a
+              href="#contact"
+              className="px-5 py-2.5 rounded-lg border border-neutral-600 hover:border-amber-400 text-neutral-200 hover:text-sky-400 transition"
+            >
+              Contact Me
             </a>
           </div>
 
@@ -349,7 +424,7 @@ const items = [
                             const name = m && m[2] ? m[2] : "";
                             return (
                               <li key={idx} className="flex items-baseline gap-2">
-                                <span className="text-base font-semibold text-sky-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)]">
+                                <span className="text-base font-semibold text-amber-400 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)]">
                                   {code}
                                 </span>
                                 {name && (
@@ -667,197 +742,128 @@ const items = [
 </section>
 
 {/* SKILLS */}
-<section
-id="Skills"
-className="py-20 bg-neutral-900 border-t border-neutral-800">
-  <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">
-      Skills & Tools
-    </h2>
+<section id="Skills" className="py-20 bg-neutral-900 border-t border-neutral-800">
+  <div className="max-w-9xl mx-auto px-5">
+    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">Skills & Tools</h2>
 
-    {/* ---- Row 1 ---- */}
-    <div className="flex flex-wrap justify-center gap-8">
-
-    <div className="group flex flex-col items-center gap-2 w-24">
-      <Icon
-        icon="simple-icons:microsoftazure"
-        className="text-5xl text-amber-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"/>
-        <span className="text-xs text-neutral-300">Azure</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-java-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Java</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-csharp-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">C#</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-python-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Python</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-javascript-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">JavaScript</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-sqlite-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">SQL</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-html5-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">HTML</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-css3-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">CSS</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-php-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">PHP</span>
-      </div>
+    {/* Row 1 */}
+    <div className="flex flex-wrap justify-center gap-7">
+      {withAlternatingHues(rowLang).map((s) => (
+        <SkillBadge key={s.label} {...s} />
+      ))}
     </div>
 
-    {/* Divider*/}
-    <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent"></div>
+    <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
 
-    {/* ---- Row 2 ---- */}
-    <div className="flex flex-wrap justify-center gap-8">
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-dotnetcore-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">.NET</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-react-original text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">React</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-nodejs-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Node.js</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-mongodb-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">MongoDB</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-oracle-original text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Oracle</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-mysql-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">MySQL</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-r-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">R</span>
-      </div>
+    {/* Row 2 */}
+    <div className="flex flex-wrap justify-center gap-7">
+      {withAlternatingHues(rowStack).map((s) => (
+        <SkillBadge key={s.label} {...s} />
+      ))}
     </div>
 
-    {/* Divider*/}
-    <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-400/70 to-transparent"></div>
+    <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-400/70 to-transparent" />
 
-    {/* ---- Row 3 ---- */}
-    <div className="flex flex-wrap justify-center gap-8">
-      <div className="group flex flex-col items-center gap-2 w-24">
-        <i className="devicon-visualstudio-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Visual Studio</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-vscode-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">VS Code</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-20">
-        <i className="devicon-gitlab-plain text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">GitLab</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-24">
-        <i className="devicon-androidstudio-plain text-5xl text-sky-400 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Android Studio</span>
-      </div>
-      <div className="group flex flex-col items-center gap-2 w-24">
-        <i className="devicon-unrealengine-original text-5xl text-amber-400 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)] transition"></i>
-        <span className="text-xs text-neutral-300">Unreal Engine</span>
-      </div>
+    {/* Row 3 */}
+    <div className="flex flex-wrap justify-center gap-7">
+      {withAlternatingHues(rowTools).map((s) => (
+        <SkillBadge key={s.label} {...s} />
+      ))}
+    </div>
+
+    <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
+
+    {/* Row 4 */}
+    <div className="flex flex-wrap justify-center gap-7">
+      {withAlternatingHues(rowAEC).map((s) => (
+        <SkillBadge key={s.label} {...s} />
+      ))}
     </div>
   </div>
-
-  {/* Divider*/}
-<div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent"></div>
-
-{/* ---- Row 4 ---- */}
-<div className="flex flex-wrap justify-center gap-8">
-  <div className="group flex flex-col items-center gap-2 w-24">
-    <Icon
-      icon="simple-icons:autodeskrevit"
-      className="text-5xl text-amber-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"/>
-    <span className="text-xs text-neutral-300">Revit</span>
-  </div>
-  <div className="group flex flex-col items-center gap-2 w-24">
-    <Icon
-      icon="simple-icons:autocad"
-      className="text-5xl text-sky-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(56,189,248,0.55)]"/>
-    <span className="text-xs text-neutral-300">AutoCAD</span>
-  </div>
-  <div className="group flex flex-col items-center gap-2 w-24">
-    <Icon
-      icon="simple-icons:autodesk"
-      className="text-5xl text-amber-400 transition transform group-hover:scale-110 group-hover:drop-shadow-[0_0_16px_rgba(251,191,36,0.55)]"/>
-    <span className="text-xs text-neutral-300">Dynamo</span>
-  </div>
-</div>
 </section>
-
 
 {/* CONTACT */}
 <section
   id="contact"
-  className="py-20 border-t border-neutral-800 text-center bg-neutral-900"
+  className="py-8 border-t border-neutral-800 text-center bg-neutral-900"
 >
-  <h2 className="text-3xl font-bold mb-4">Let’s Connect</h2>
-  <p className="text-lg text-neutral-300 mb-10">
-    I’m open to data and software roles in New Zealand.
-    Let’s connect through email, LinkedIn, or GitLab.
-  </p>
+  <h2 className="text-3xl font-bold mb-10 text-amber-400">Contact Me</h2>
 
-  {/* Icon Buttons */}
-  <div className="flex justify-center gap-8">
-    {/* Email */}
+  {/* Contact Info Row */}
+  <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-10 text-neutral-300">
+    <div className="flex items-center gap-2">
+      <Mail className="size-5 text-sky-400" />
+      <a
+        href="mailto:minsoehtut306@email.com"
+        className="hover:text-amber-400 transition"
+      >
+        minsoehtut306@email.com
+      </a>
+    </div>
+
+    <div className="flex items-center gap-2">
+      <Phone className="size-5 text-sky-400" />
+      <a href="tel:+64224754505" className="hover:text-amber-400 transition">
+        +64204463402
+      </a>
+    </div>
+
+    <div className="flex items-center gap-2">
+      <MapPin className="size-5 text-sky-400" />
+      <span>Hamilton, New Zealand</span>
+    </div>
+  </div>
+
+  {/* Social Icons Row */}
+  <div className="flex justify-center gap-10">
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=minsoehtut306@email.com"
       target="_blank"
       rel="noopener noreferrer"
-      className="p-4 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_20px_2px_rgba(251,191,36,0.3)] transition"
+      className="p-5 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_15px_2px_rgba(251,191,36,0.3)] transition"
       aria-label="Send Email"
       title="Send me an Email"
     >
-      <Mail size={30} className="text-amber-400" />
+            <Mail size={24} className="text-amber-400" />
     </a>
 
-    {/* LinkedIn */}
     <a
       href="https://www.linkedin.com/in/min-soe-htut"
       target="_blank"
       rel="noopener noreferrer"
-      className="p-4 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_20px_2px_rgba(251,191,36,0.3)] transition"
-      aria-label="LinkedIn Profile"
-      title="View my LinkedIn"
+      aria-label="LinkedIn"
+      className="p-5 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_18px_rgba(251,191,36,0.35)] transition"
     >
-      <Linkedin size={30} className="text-amber-400" />
+      <Linkedin className="size-5 text-amber-400" />
     </a>
 
-    {/* GitHub */}
     <a
       href="https://github.com/minsoehtut306"
       target="_blank"
       rel="noopener noreferrer"
-      className="p-4 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_20px_2px_rgba(251,191,36,0.3)] transition"
-      aria-label="GitHub Profile"
-      title="View my GitHub Projects"
+      aria-label="GitHub"
+      className="p-5 rounded-full bg-neutral-800 hover:bg-amber-500/20 hover:shadow-[0_0_18px_rgba(251,191,36,0.35)] transition"
     >
-      <Github size={30} className="text-amber-400" />
+      <Github className="size-5 text-amber-400" />
     </a>
   </div>
+
+  {/* Footer */}
+  <footer className="mt-16 border-t border-neutral-800 pt-6">
+    <nav className="flex flex-wrap justify-center gap-30 text-n text-400 mb-5">
+      <a href="#home" className="hover:text-amber-400">Home</a>
+      <a href="#journey" className="hover:text-amber-400">Journey</a>
+      <a href="#projects" className="hover:text-amber-400">Projects</a>
+      <a href="#Skills" className="hover:text-amber-400">Skills</a>
+      <a href="#contact" className="hover:text-amber-400">Contact</a>
+    </nav>
+
+    <p className="text-n text-500">
+      © {new Date().getFullYear()} Min Soe Htut — All rights reserved
+    </p>
+  </footer>
 </section>
+
     </main>
   );
 }
