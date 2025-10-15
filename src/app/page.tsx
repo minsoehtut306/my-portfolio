@@ -42,6 +42,8 @@ const rowLang: Skill[] = [
   { label: "HTML", kind: "devicon", token: "devicon-html5-plain" },
   { label: "CSS", kind: "devicon", token: "devicon-css3-plain" },
   { label: "PHP", kind: "devicon", token: "devicon-php-plain" },
+  { label: "WRAMP", kind: "iconify", token: "mdi:chip" },
+  { label: "Batch Script", kind: "iconify", token: "mdi:console" },
 ];
 
 const rowStack: Skill[] = [
@@ -52,6 +54,7 @@ const rowStack: Skill[] = [
   { label: "Oracle", kind: "devicon", token: "devicon-oracle-original" },
   { label: "MySQL", kind: "devicon", token: "devicon-mysql-plain" },
   { label: "R", kind: "devicon", token: "devicon-r-plain" },
+  { label: "LaTeX", kind: "devicon", token: "devicon-latex-original" },
 ];
 
 const rowTools: Skill[] = [
@@ -60,6 +63,9 @@ const rowTools: Skill[] = [
   { label: "GitHub", kind: "devicon", token: "devicon-github-original" },
   { label: "Android Studio", kind: "devicon", token: "devicon-androidstudio-plain" },
   { label: "Unreal Engine", kind: "devicon", token: "devicon-unrealengine-original" },
+  { label: "Google Colab", kind: "iconify", token: "simple-icons:googlecolab" },
+  { label: "GraphStream", kind: "iconify", token: "mdi:graph-outline" },
+
 ];
 
 const rowAEC: Skill[] = [
@@ -477,7 +483,7 @@ const items = [
           machine learning labs (regression, clustering, and neural networks).
         </p>
         <p className="text-xs text-neutral-400 mb-4">
-          Tech: Python, NumPy, scikit-learn, TensorFlow, Google Colab
+          Tech: Python, NumPy, Google Colab
         </p>
         <a
           href="https://github.com/minsoehtut306/AI-and-Machine-Learning"
@@ -492,11 +498,11 @@ const items = [
     {/* Algorithms */}
       <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
         <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Algorithms 
+          Algorithms
         </h3>
         <p className="text-sm text-neutral-300 mb-3">
           A curated collection of algorithmic implementations from sorting, graphs, regex,
-          dynamic programming, and complexity analysis — written in Java with academic notes.
+          dynamic programming, and complexity analysis — written in Java.
         </p>
         <p className="text-xs text-neutral-400 mb-4">
           Tech: Java, Algorithm Design, Graphs, Dynamic Programming
@@ -612,7 +618,7 @@ const items = [
           and technical skills. Features a responsive dark theme, animated sections, and custom icon system.
         </p>
         <p className="text-xs text-neutral-400 mb-4">
-          Tech: Next.js, React, Tailwind CSS, Framer Motion, TypeScript
+          Tech: Next.js, React, Tailwind CSS, TypeScript
         </p>
         <a
           href="https://github.com/minsoehtut306/my-portfolio"
@@ -636,7 +642,7 @@ const items = [
           TFTP implementation for UDP-based file exchange.
         </p>
         <p className="text-xs text-neutral-400 mb-4">
-          Tech: Java, TCP/UDP, HTTP, TLS/SSL, KeyStores
+          Tech: Java, TCP/UDP, HTTP, TLS/SSL
         </p>
         <a
           href="https://github.com/minsoehtut306/Network-File-Transfer"
@@ -681,7 +687,7 @@ const items = [
           visualisation, JUnit tests, and CI/CD pipeline automation.
         </p>
         <p className="text-xs text-neutral-400 mb-4">
-          Tech: Java, JUnit, GraphStream, CI/CD
+          Tech: LaTeX, Java, JUnit, GraphStream, CI/CD
         </p>
         <a
           href="https://github.com/minsoehtut306/Software-Engineering-Design"
@@ -850,7 +856,7 @@ const items = [
 
   {/* Footer */}
   <footer className="mt-16 border-t border-neutral-800 pt-6">
-    <nav className="flex flex-wrap justify-center gap-30 text-n text-400 mb-5">
+    <nav className="flex flex-wrap justify-center gap-30 text-xl text-400 mb-5">
       <a href="#home" className="hover:text-amber-400">Home</a>
       <a href="#journey" className="hover:text-amber-400">Journey</a>
       <a href="#projects" className="hover:text-amber-400">Projects</a>

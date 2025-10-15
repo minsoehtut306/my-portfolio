@@ -8,8 +8,11 @@ This website acts as both a **digital résumé** and a **project showcase**, fea
 ## Overview  
 
 This website was designed to present my **academic and professional experience**, along with highlights of my featured projects.  
-I built this portfolio using Next.js, TypeScript, and Tailwind CSS because I wanted to challenge myself to go beyond traditional HTML and CSS development. TypeScript helps me write cleaner, more reliable, and maintainable code with type safety. Next.js provides a modern framework for fast, scalable React applications with server-side rendering and easy deployment. Tailwind CSS allows me to design efficiently with a consistent, responsive style system.
-Rather than choosing simpler or more common approaches, I focused on tools that would help me grow as a developer and build real-world, production-ready projects.
+I built this portfolio using Next.js, TypeScript, and Tailwind CSS because I wanted to challenge myself to go 
+beyond traditional HTML and CSS development. TypeScript helps me write cleaner, more reliable, and maintainable 
+code with type safety. Next.js provides a modern framework for fast, scalable React applications with server-side 
+rendering and easy deployment. Tailwind CSS allows me to design efficiently with a consistent, responsive style system.
+I focused on tools that would help me grow as a developer and build real-world, production-ready projects.
 
 ### Key Sections  
 - **Home** – Hero introduction with my photo, about text, and quick navigation links.  
@@ -40,7 +43,6 @@ Rather than choosing simpler or more common approaches, I focused on tools that 
 | **Icons & UI** | Lucide React, Devicon, Iconify |
 | **Deployment** | Vercel |
 | **Version Control** | Git / GitHub |
-| **Design Tools** | Figma, Canva |
 
 ---
 
