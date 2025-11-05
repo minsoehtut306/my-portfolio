@@ -94,6 +94,7 @@ const items = [
   { href: "#home", label: "Home" },
   { href: "#journey", label: "Journey" },
   { href: "#projects", label: "Projects" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#Skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
@@ -460,7 +461,6 @@ const items = [
   </div>
 </section>
 
-
 {/* PROJECTS */}
 <section
   id="projects"
@@ -742,6 +742,59 @@ const items = [
         >
           View on GitLab →
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+{/* CERTIFICATIONS */}
+<section
+  id="certifications"
+  className="py-20 bg-neutral-900 border-t border-neutral-800"
+>
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">
+      Certifications
+    </h2>
+
+    <div className="grid gap-8 md:grid-cols-2">
+      {/* Azure Fundamentals */}
+      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
+        <div className="flex items-center gap-3 mb-3">
+          <Icon
+            icon="simple-icons:microsoftazure"
+            className="text-4xl text-sky-400"
+          />
+          <h3 className="text-lg font-semibold text-sky-400">
+            Microsoft Certified: Azure Fundamentals (AZ-900)
+          </h3>
+        </div>
+        <span className="inline-flex items-center rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300 mb-3">
+          In progress
+        </span>
+        <p className="text-sm text-neutral-300">
+          Currently preparing for the AZ-900 exam, focusing on core cloud
+          concepts, Azure services, security, pricing, and governance.
+        </p>
+      </div>
+
+      {/* Power Platform Fundamentals */}
+      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.25)] transition">
+        <div className="flex items-center gap-3 mb-3">
+          <Icon
+            icon="simple-icons:powerapps"
+            className="text-4xl text-amber-400"
+          />
+          <h3 className="text-lg font-semibold text-amber-400">
+            Microsoft Certified: Power Platform Fundamentals (PL-900)
+          </h3>
+        </div>
+        <span className="inline-flex items-center rounded-full border border-amber-400/70 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300 mb-3">
+          In progress
+        </span>
+        <p className="text-sm text-neutral-300">
+          Studying low-code app development, Power Apps, Power Automate,
+          Power BI, and Power Platform capabilities in preparation for the PL-900 exam.
+        </p>
       </div>
     </div>
   </div>
