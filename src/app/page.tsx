@@ -913,6 +913,7 @@ const items = [
       <a href="#home" className="hover:text-amber-400">Home</a>
       <a href="#journey" className="hover:text-amber-400">Journey</a>
       <a href="#projects" className="hover:text-amber-400">Projects</a>
+      <a href="#certifications" className="hover:text-amber-400">Certifications</a>
       <a href="#Skills" className="hover:text-amber-400">Skills</a>
       <a href="#contact" className="hover:text-amber-400">Contact</a>
     </nav>
