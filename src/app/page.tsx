@@ -755,9 +755,9 @@ const items = [
     </div>
 
     {/* Divider */}
-    <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
+                  <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-500/60 to-transparent" />
 
-    <h3 className="text-2xl font-bold mb-12 text-center text-amber-400">
+                  <h3 className="text-2xl font-bold mb-12 text-center text-sky-400">
         Gaming Projects
     </h3>
 
@@ -789,29 +789,36 @@ const items = [
 
         {/* Galactic Shooter – University (Amber) */}
         <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
+            {/* Thumbnail */}
             <h3 className="text-xl font-semibold text-amber-400">
-                Galactic Shooter
+                Galactic Shooter - GameMaker Studio 2
             </h3>
-            <span className="mt-2 mb-3 inline-flex w-fit rounded-full border border-amber-400/70 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
-                Coming soon
-            </span>
+
+            <div className="relative mb-4 h-40 w-full overflow-hidden rounded-lg border border-neutral-700">
+                <Image
+                    src="/projects/galactic-shooter.jpg"
+                    alt="Galactic Shooter screenshot"
+                    fill
+                    className="object-cover"
+                />
+            </div>
 
             <p className="text-sm text-neutral-300 mb-3">
-                A university game project. Full source code, gameplay details, and documentation
-                will be added once the project archive is published.
-            </p>
-            <p className="text-xs text-neutral-400 mb-4">
-                Tech: Game Engine (TBC), Gameplay Systems, UI
+                A mouse-controlled top-down space shooter built in GameMaker Studio 2.
+                Features auto-fire bullet patterns, multiple enemy types, asteroids, score tracking,
+                weapon pickups, and level progression with boss stages.
             </p>
 
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-                <a
-                    href="#"
-                    className="inline-block px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium cursor-not-allowed opacity-80"
-                >
-                    View on GitLab →
-                </a>
-            </div>
+            <p className="text-xs text-neutral-400 mb-4">
+                Tech: GameMaker Studio 2, GML, UI Screens, Audio
+            </p>
+
+            <a
+                href="https://github.com/minsoehtut306/Galactic-Shooter"
+                className="inline-block px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium cursor-not-allowed opacity-80"
+            >
+                View on GitLab →
+            </a>
         </div>
 
         {/* Multiplayer FPS – Current (Blue) */}
