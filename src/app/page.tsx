@@ -190,7 +190,7 @@ const items = [
             and consistent development standards.
             <br /><br />
             With a background in <span className="text-sky-400 font-semibold">Civil & Structural Engineering</span>
-            and <span className="text-amber-400 font-semibold">Operations Management</span>, I bring a multidisciplinary
+             and <span className="text-amber-400 font-semibold">Operations Management</span>, I bring a multidisciplinary
             perspective to problem-solving and am eager to contribute to opportunities that merge technology, creativity,
             and innovation.
             </p>
