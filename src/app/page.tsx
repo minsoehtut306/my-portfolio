@@ -765,14 +765,24 @@ const items = [
         {/* Craft World – University (Amber) */}
         <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
             <h3 className="text-xl font-semibold mb-2 text-amber-400">
-                Craft World – Unreal Engine 5
+                Craft World – Unreal Engine 5.4
             </h3>
+
+            <div className="relative mb-4 w-full aspect-[4/3] overflow-hidden rounded-lg border border-neutral-700 bg-black">
+                <Image
+                    src="/projects/craft_world.jpg"
+                    alt="Craft World screenshot"
+                    fill
+                    className="object-contain"
+                />
+            </div>
+
             <p className="text-sm text-neutral-300 mb-3">
-                A third-person puzzle and shooter game built with Unreal Engine 5, featuring
+                A third-person puzzle and shooter game built with Unreal Engine 5.4, featuring
                 AI combat, interactive puzzle rooms, health systems, and Blueprint-driven logic.
             </p>
             <p className="text-xs text-neutral-400 mb-4">
-                Tech: Unreal Engine 5, Blueprints, AI, Level Design
+                Tech: Unreal Engine 5.4, Blueprints, AI, Level Design
             </p>
 
             <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -794,12 +804,12 @@ const items = [
                 Galactic Shooter - GameMaker Studio 2
             </h3>
 
-            <div className="relative mb-4 h-40 w-full overflow-hidden rounded-lg border border-neutral-700">
+            <div className="relative mb-4 w-full aspect-[4/3] overflow-hidden rounded-lg border border-neutral-700 bg-black">
                 <Image
                     src="/projects/galactic-shooter.jpg"
                     alt="Galactic Shooter screenshot"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                 />
             </div>
 
@@ -815,7 +825,9 @@ const items = [
 
             <a
                 href="https://github.com/minsoehtut306/Galactic-Shooter"
-                className="inline-block px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium cursor-not-allowed opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
             >
                 View on GitLab →
             </a>
@@ -834,7 +846,7 @@ const items = [
                 movement, weapon systems, and scalable multiplayer gameplay.
             </p>
             <p className="text-xs text-neutral-400 mb-4">
-                Tech: Unreal Engine 5, Networking, Gameplay Systems
+                Tech: Unreal Engine 5.4, Networking, Gameplay Systems
             </p>
 
             <div className="mt-3 flex flex-wrap items-center gap-3">
