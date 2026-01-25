@@ -833,6 +833,45 @@ const items = [
             </a>
         </div>
 
+        {/* Unity Mobile Roguelike – Personal (Blue) */}
+        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
+            {/*  thumbnail */}
+            <h3 className="text-xl font-semibold text-sky-400">
+                Unity Mobile Roguelike Prototype
+            </h3>
+            <div className="relative mb-4 w-full aspect-[4/3] overflow-hidden rounded-lg border border-neutral-700 bg-black">
+            <Image
+                    src="/projects/unity-roguelike.jpg"
+                    alt="Unity mobile roguelike prototype"
+                    fill
+                    className="object-contain"
+                />
+            </div>
+
+            <span className="mt-2 mb-3 inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                In progress
+            </span>
+
+            <p className="text-sm text-neutral-300 mb-3">
+                A top-down mobile roguelike prototype built in Unity for Android, focused on
+                core gameplay systems such as player movement, auto-targeting weapons,
+                enemy AI, health systems, and collectible mechanics rather than visual polish.
+            </p>
+
+            <p className="text-xs text-neutral-400 mb-4">
+                Tech: Unity, C#, Android, Tilemaps, Gameplay Systems
+            </p>
+
+            <a
+                href="https://github.com/minsoehtut306/RogueLike_Survival"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium"
+            >
+                View on GitHub →
+            </a>
+        </div>
+
         {/* Multiplayer FPS – Current (Blue) */}
         <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
             <h3 className="text-xl font-semibold text-sky-400">
