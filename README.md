@@ -37,7 +37,7 @@ I focused on tools that would help me grow as a developer and build real-world, 
 ## Tech Stack  
 
 | Category | Tools & Frameworks |
-|-----------|--------------------|
+|----------|--------------------|
 | **Frontend** | Next.js 15, React, TypeScript, Tailwind CSS |
 | **Animation** | Framer Motion |
 | **Icons & UI** | Lucide React, Devicon, Iconify |
