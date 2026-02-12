@@ -92,7 +92,7 @@ export default function Home() {
 
 const items = [
   { href: "#home", label: "Home" },
-  { href: "#journey", label: "Journey" },
+  { href: "#Experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#Skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
@@ -174,31 +174,38 @@ const items = [
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
             Hi, I’m <span className="text-amber-400">Min Soe</span>
           </h1>
-           <p className="mt-4 text-lg text-neutral-300 leading-relaxed">
-            Fresh graduate from the <span className="text-amber-400 font-semibold">University of Waikato</span>
-            with a Bachelor of Science majoring in <span className="text-sky-400 font-semibold">Computer Science</span>.
-            I am passionate about software development, with a particular interest in
-            <span className="text-amber-400 font-semibold"> game development</span>. From a young age I would draw games
-            in my sketchbook for myself and friends to imagine and play with in the classroom, and now, studying
-            computer science, I am driven to turn that dream and passion into reality in the form of playable
-            software that many people can enjoy.
+        <p className="mt-4 text-lg text-neutral-300 leading-relaxed">
+            Fresh graduate from the{" "}
+            <span className="text-amber-400 font-semibold">
+                University of Waikato
+            </span>{" "}
+            with a Bachelor of Science in{" "}
+            <span className="text-sky-400 font-semibold">
+                Computer Science
+            </span>, and a{" "}
+            <span className="text-amber-400 font-semibold">
+                BIM professional
+            </span>{" "}
+            with experience in{" "}
+            <span className="text-amber-400 font-semibold">
+                Civil & Structural modelling
+            </span>. With exposure to complex structural projects and multidisciplinary coordination, I bring both technical knowledge and practical industry experience into every project I contribute to.
             <br /><br />
-            Alongside game development, I enjoy building
-            <span className="text-amber-400"> full-stack applications</span> using modern, interactive technologies.
-            I take pride in creating engaging software experiences whether through game mechanics, system logic, or
-            end-to-end application design and I value writing clean, well-structured code that follows best practices
-            and consistent development standards.
-            <br /><br />
-            With a background in <span className="text-sky-400 font-semibold">Civil & Structural Engineering</span>
-             and <span className="text-amber-400 font-semibold">Operations Management</span>, I bring a multidisciplinary
-            perspective to problem-solving and am eager to contribute to opportunities that merge technology, creativity,
-            and innovation.
-            </p>
+            I combine{" "}
+            <span className="text-sky-400 font-semibold">
+                Software Development
+            </span>{" "}
+            with{" "}
+            <span className="text-amber-400 font-semibold">
+                Building Engineering
+            </span>, bringing structured thinking into both digital systems and buildable design. My background allows me to approach modelling not only as drafting work, but as part of a larger system, with a strong focus on precision, coordination, workflow efficiency, and long-term project clarity.
+        </p>
+
 
           {/* Buttons */}
           <div className="mt-7 flex flex-wrap justify-center md:justify-start gap-4">
             <a
-              href="#journey"
+              href="#Experience"
               className="px-5 py-2.5 rounded-lg border border-neutral-600 hover:border-sky-400 text-neutral-200 hover:text-amber-400 transition"
             >
               Know more →
@@ -253,10 +260,10 @@ const items = [
         </div>
       </section>
 
-{/* JOURNEY */}
-<section id="journey" className="py-20 bg-neutral-900 border-t border-neutral-800">
+{/* Experience */}
+  <section id="Experience" className="py-20 bg-neutral-900 border-t border-neutral-800">
   <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">Journey</h2>
+  <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">Experience</h2>
 
     {/* Timeline wrapper */}
     <div className="relative">
@@ -471,489 +478,281 @@ const items = [
 </section>
 
 {/* PROJECTS */}
-<section
-  id="projects"
-  className="py-20 bg-neutral-900 border-t border-neutral-800"
->
-  <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">
-      Featured Projects
-    </h2>
-    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-      
-      {/* AI & Machine Learning Projects */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          AI & Machine Learning Projects
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A comprehensive collection of Artificial Intelligence and Machine Learning coursework,
-          covering AI search algorithms, adversarial MCTS, constraint optimization, and Python-based
-          machine learning labs (regression, clustering, and neural networks).
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: Python, NumPy, Google Colab
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/AI-and-Machine-Learning"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+<section id="projects" className="border-t border-neutral-800 bg-neutral-900 py-20">
+    <div className="mx-auto max-w-6xl px-6">
+        <h2 className="mb-12 text-center text-3xl font-bold text-amber-400">
+            Featured Projects
+        </h2>
 
-    {/* Algorithms */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Algorithms
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A curated collection of algorithmic implementations from sorting, graphs, regex,
-          dynamic programming, and complexity analysis — written in Java.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: Java, Algorithm Design, Graphs, Dynamic Programming
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Algorithms"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+        {/* Divider */}
+        <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-500/60 to-transparent" />
 
-    {/* Craft World Game */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Craft World – Unreal Engine 5 Game
+        {/* Engineering & BIM Projects */}
+        <h3 className="mb-6 text-center text-2xl font-bold text-sky-400">
+            Engineering
         </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A third-person puzzle and shooter game built with Unreal Engine 5.
-          Features interactive puzzle rooms, AI combat, health systems, and
-          Blueprints-based logic with animations and HUD widgets.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: Unreal Engine 5, Blueprints, AI, Level Design
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Craft-World"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
 
-    {/* Driving Quiz App */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-sky-400">
-          Driving Quiz App (.NET MAUI)
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A cross-platform C# quiz app built with .NET MAUI to help users practice for the
-          New Zealand driving theory test. Features Android and Windows builds with device setup
-          guidance and interactive multiple-choice quizzes.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: .NET MAUI, C#, XAML, Visual Studio 2022
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/DrivingQuiz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium shadow-[0_0_16px_2px_rgba(56,189,248,0.25)] transition"
-        >
-          View on GitLab →
-        </a>
-      </div>
+        <div className="mb-14 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+            {/* Land Transport Authority (3 projects) – Confidential */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    Land Transport Authority (3 Projects) — Singapore
+                </h4>
 
-    {/* Equipment-Rentals */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Equipment Rentals – Windows Forms Database App
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A login and registration demo using C# WinForms and SQL Server backend. Implements user
-          authentication, registration, and session browsing for social media accounts with a
-          connected database.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: C#, WinForms, SQL Server, ADO.NET
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Equipment-Rentals"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/lta.jpg"
+                        alt="Land Transport Authority project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
 
-    {/* EV-Charger Finder */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          EV-Charger Finder (Android)
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          An Android app that helps users locate nearby EV charging stations using Google Maps API and device GPS.
-          Includes search, location tracking, and charger detail views with integrated unit and instrumentation tests.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: Java, Android Studio, Google Maps API, Gradle
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/EV-Changer-Finder"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    Delivered structural BIM modelling and coordinated outputs for transport-related
+                    projects, supporting cross-discipline workflows and documentation standards.
+                </p>
 
-      {/* Portfolio Website */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-sky-400">
-          Portfolio Website (Next.js + Tailwind)
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A personal portfolio website built with Next.js and Tailwind CSS to showcase my journey, projects,
-          and technical skills. Features a responsive dark theme, animated sections, and custom icon system.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: Next.js, React, Tailwind CSS, TypeScript
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/my-portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium shadow-[0_0_16px_2px_rgba(56,189,248,0.25)] transition"
-        >
-          View on GitHub →
-        </a>
-      </div>
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Tender • Submission</p>
+                </div>
 
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
 
-    {/* Network File Transfer */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Network File Transfer (Java)
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A suite of Java networking projects demonstrating various communication protocols:
-          TCP/UDP sockets, a lightweight HTTP server, TLS-encrypted file transfers, and a
-          TFTP implementation for UDP-based file exchange.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: Java, TCP/UDP, HTTP, TLS/SSL
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Network-File-Transfer"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+            {/* Woodlands North Coast */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    Woodlands North Coast — Light Industrial Development
+                </h4>
 
-    {/* WRAMP Exercises */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          WRAMP Exercises (Assembly + C)
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A series of low-level programming exercises for the WRAMP system, focusing on assembly and C integration.
-          Covers I/O handling, serial communication, exceptions, interrupts, and a multitasking kernel for concurrent task execution.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: WRAMP Assembly, C, WRAMP Simulator / Hardware
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Ramp"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/woodlands.jpg"
+                        alt="Woodlands North Coast project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
 
-      {/*Software Engineering Design */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Software Engineering Design Project
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A multi-stage Java project demonstrating full software lifecycle:
-          design, testing, implementation, and maintenance. Includes GraphStream
-          visualisation, JUnit tests, and CI/CD pipeline automation.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: LaTeX, Java, JUnit, GraphStream, CI/CD
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Software-Engineering-Design"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    9-storey light industrial development with mixed-use spaces and a basement carpark.
+                    Contributed to structural modelling, detailing, and coordinated documentation.
+                </p>
 
-      {/*Boyes Park Redevelopment */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Boyes Park Redevelopment
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          Urban redevelopment project improving park safety, inclusivity, and
-          amenities in collaboration with Hamilton City Council. Delivered via
-          design documentation, report, and digital poster.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Focus: Safety by Design, Accessibility, Digital Engagement
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/The-Impact-Lab"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Tender • Submission • Construction</p>
+                </div>
 
-      {/*Zoo Management App */}
-      <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-        <h3 className="text-xl font-semibold mb-2 text-amber-400">
-          Zoo Management Application
-        </h3>
-        <p className="text-sm text-neutral-300 mb-3">
-          A C# Windows Forms app for managing zoo data with dual support for Oracle (SQL)
-          and MongoDB (NoSQL). Includes CRUD operations for animals, staff, and enclosures.
-        </p>
-        <p className="text-xs text-neutral-400 mb-4">
-          Tech: C#, WinForms, Oracle, MongoDB
-        </p>
-        <a
-          href="https://github.com/minsoehtut306/Zoo-"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-auto px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-        >
-          View on GitLab →
-        </a>
-      </div>
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+
+            {/* 70 Anson Synergy Hub */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    70 Anson Synergy Hub — Redevelopment
+                </h4>
+
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/70-anson.jpg"
+                        alt="70 Anson Synergy Hub redevelopment"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    26-storey commercial redevelopment with retail, multi-storey carpark, sky terrace,
+                    communal roof terrace, and basements. Supported modelling and coordinated outputs.
+                </p>
+
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Tender • Submission</p>
+                </div>
+
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+
+            {/* KPoint Show Flat */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    KPoint Show Flat — Temporary Showflat & Sales Office
+                </h4>
+
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/kpoint.jpg"
+                        alt="KPoint show flat project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    Temporary single-storey showflat and sales office. Supported submission and
+                    construction documentation through structural modelling and coordination.
+                </p>
+
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Submission • Construction</p>
+                </div>
+
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+
+            {/* Senja Polyclinic (ERSS) */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    Senja Polyclinic (ERSS) — Integrated Healthcare Development
+                </h4>
+
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/senja.jpg"
+                        alt="Senja Polyclinic project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    12-storey integrated polyclinic, nursing home, and senior care centre development.
+                    Supported construction package delivery and coordinated modelling outputs.
+                </p>
+
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Construction</p>
+                </div>
+
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+
+            {/* Mandai Bird Park */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    Mandai Bird Park — Commercial Blocks & MSCP
+                </h4>
+
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/mandai.jpg"
+                        alt="Mandai Bird Park project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    Structural support for 1-storey commercial blocks on an environment deck and a
+                    multi-storey carpark with mezzanine and ancillary facilities.
+                </p>
+
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Tender</p>
+                </div>
+
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+
+            {/* National Skin Centre Expansion (MOH) */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    National Skin Centre Expansion (MOH)
+                </h4>
+
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/nsc.jpg"
+                        alt="National Skin Centre expansion project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    4-storey / 10-storey building with 2 basements for the National Skin Centre and
+                    reconstruction of the existing building for healthcare group offices.
+                </p>
+
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Submission</p>
+                </div>
+
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+
+            {/* Kallang PCLTC */}
+            <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 transition hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.22)]">
+                <h4 className="mb-3 text-xl font-semibold text-sky-400">
+                    Kallang PCLTC — Polyclinic & Long-Term Care Facility
+                </h4>
+
+                <div className="relative mb-4 w-full overflow-hidden rounded-lg border border-neutral-700 bg-black aspect-[4/3]">
+                    <Image
+                        src="/projects/kallang.jpg"
+                        alt="Kallang PCLTC project"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+
+                <p className="mb-4 text-sm leading-relaxed text-neutral-300">
+                    10-storey polyclinic and long-term care facility with single basement carpark.
+                    Supported modelling and coordinated documentation outputs.
+                </p>
+
+                <div className="mb-5">
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                        Packages issued
+                    </div>
+                    <p className="text-sm text-neutral-300">Submission • Construction</p>
+                </div>
+
+                <span className="inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                    Revit • AutoCAD
+                </span>
+            </div>
+        </div>
+
+        {/* Divider */}
+        <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
     </div>
-
-    {/* Divider */}
-                  <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-amber-500/60 to-transparent" />
-
-                  <h3 className="text-2xl font-bold mb-12 text-center text-sky-400">
-        Gaming Projects
-    </h3>
-
-    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {/* Craft World – University (Amber) */}
-        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-            <h3 className="text-xl font-semibold mb-2 text-amber-400">
-                Craft World – Unreal Engine 5.4
-            </h3>
-
-            <div className="relative mb-4 w-full aspect-[4/3] overflow-hidden rounded-lg border border-neutral-700 bg-black">
-                <Image
-                    src="/projects/craft_world.jpg"
-                    alt="Craft World screenshot"
-                    fill
-                    className="object-contain"
-                />
-            </div>
-
-            <p className="text-sm text-neutral-300 mb-3">
-                A third-person puzzle and shooter game built with Unreal Engine 5.4, featuring
-                AI combat, interactive puzzle rooms, health systems, and Blueprint-driven logic.
-            </p>
-            <p className="text-xs text-neutral-400 mb-4">
-                Tech: Unreal Engine 5.4, Blueprints, AI, Level Design
-            </p>
-
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-                <a
-                    href="https://github.com/minsoehtut306/Craft-World"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-                >
-                    View on GitLab →
-                </a>
-            </div>
-        </div>
-
-        {/* Galactic Shooter – University (Amber) */}
-        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(251,191,36,0.18)] transition">
-            {/* Thumbnail */}
-            <h3 className="text-xl font-semibold text-amber-400">
-                Galactic Shooter - GameMaker Studio 2
-            </h3>
-
-            <div className="relative mb-4 w-full aspect-[4/3] overflow-hidden rounded-lg border border-neutral-700 bg-black">
-                <Image
-                    src="/projects/galactic-shooter.jpg"
-                    alt="Galactic Shooter screenshot"
-                    fill
-                    className="object-contain"
-                />
-            </div>
-
-            <p className="text-sm text-neutral-300 mb-3">
-                A mouse-controlled top-down space shooter built in GameMaker Studio 2.
-                Features auto-fire bullet patterns, multiple enemy types, asteroids, score tracking,
-                weapon pickups, and level progression with boss stages.
-            </p>
-
-            <p className="text-xs text-neutral-400 mb-4">
-                Tech: GameMaker Studio 2, GML, UI Screens, Audio
-            </p>
-
-            <a
-                href="https://github.com/minsoehtut306/Galactic-Shooter"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-neutral-900 font-medium"
-            >
-                View on GitLab →
-            </a>
-        </div>
-
-        {/* Unity Mobile Roguelike – Personal (Blue) */}
-        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
-            {/*  thumbnail */}
-            <h3 className="text-xl font-semibold text-sky-400">
-                Unity Mobile Roguelike Prototype
-            </h3>
-            <div className="relative mb-4 w-full aspect-[4/3] overflow-hidden rounded-lg border border-neutral-700 bg-black">
-            <Image
-                    src="/projects/unity-roguelike.jpg"
-                    alt="Unity mobile roguelike prototype"
-                    fill
-                    className="object-contain"
-                />
-            </div>
-
-            <span className="mt-2 mb-3 inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
-                In progress
-            </span>
-
-            <p className="text-sm text-neutral-300 mb-3">
-                A top-down mobile roguelike prototype built in Unity for Android, focused on
-                core gameplay systems such as player movement, auto-targeting weapons,
-                enemy AI, health systems, and collectible mechanics rather than visual polish.
-            </p>
-
-            <p className="text-xs text-neutral-400 mb-4">
-                Tech: Unity, C#, Android, Tilemaps, Gameplay Systems
-            </p>
-
-            <a
-                href="https://github.com/minsoehtut306/RogueLike_Survival"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium"
-            >
-                View on GitHub →
-            </a>
-        </div>
-
-        {/* Multiplayer FPS – Current (Blue) */}
-        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
-            <h3 className="text-xl font-semibold text-sky-400">
-                Multiplayer FPS Shooter
-            </h3>
-            <span className="mt-2 mb-3 inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
-                In progress
-            </span>
-            <p className="text-sm text-neutral-300 mb-3">
-                A first-person multiplayer shooter currently in development, focusing on
-                movement, weapon systems, and scalable multiplayer gameplay.
-            </p>
-            <p className="text-xs text-neutral-400 mb-4">
-                Tech: Unreal Engine 5.4, Networking, Gameplay Systems
-            </p>
-
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-                <a
-                    href="#"
-                    className="inline-block px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium cursor-not-allowed opacity-80"
-                >
-                    View on GitLab →
-                </a>
-            </div>
-        </div>
-
-        {/* Dungeon Crawler – Future (Blue) */}
-        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
-            <h3 className="text-xl font-semibold text-sky-400">
-                Dungeon Crawler ARPG
-            </h3>
-            <span className="mt-2 mb-3 inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
-                Planned
-            </span>
-            <p className="text-sm text-neutral-300 mb-3">
-                A planned action RPG inspired by Path of Exile and Diablo, focusing on
-                loot-driven progression, builds, and replayable combat encounters.
-            </p>
-            <p className="text-xs text-neutral-400 mb-4">
-                Focus: Combat systems, loot, progression
-            </p>
-
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-                <a
-                    href="#"
-                    className="inline-block px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium cursor-not-allowed opacity-80"
-                >
-                    View on GitLab →
-                </a>
-            </div>
-        </div>
-
-        {/* Base-Building RTS – Future (Blue) */}
-        <div className="group relative rounded-xl border border-neutral-700 bg-neutral-800/70 p-6 hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.25)] transition">
-            <h3 className="text-xl font-semibold text-sky-400">
-                Base-Building RTS
-            </h3>
-            <span className="mt-2 mb-3 inline-flex w-fit rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
-                Planned
-            </span>
-            <p className="text-sm text-neutral-300 mb-3">
-                A strategy game concept inspired by classic RTS titles such as StarCraft,
-                Warcraft, and Red Alert 2, emphasizing economy, base expansion, and tactics.
-            </p>
-            <p className="text-xs text-neutral-400 mb-4">
-                Focus: Base building, resources, unit control
-            </p>
-
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-                <a
-                    href="#"
-                    className="inline-block px-4 py-2 rounded-lg bg-sky-500/90 hover:bg-sky-400 text-neutral-900 font-medium cursor-not-allowed opacity-80"
-                >
-                    View on GitLab →
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-
-  </div>
 </section>
 
 {/* SKILLS */}
@@ -963,7 +762,7 @@ const items = [
 
     {/* Row 1 */}
     <div className="flex flex-wrap justify-center gap-7">
-      {withAlternatingHues(rowLang).map((s) => (
+      {withAlternatingHues(rowAEC).map((s) => (
         <SkillBadge key={s.label} {...s} />
       ))}
     </div>
@@ -972,7 +771,7 @@ const items = [
 
     {/* Row 2 */}
     <div className="flex flex-wrap justify-center gap-7">
-      {withAlternatingHues(rowStack).map((s) => (
+       {withAlternatingHues(rowLang).map((s) => (
         <SkillBadge key={s.label} {...s} />
       ))}
     </div>
@@ -981,7 +780,7 @@ const items = [
 
     {/* Row 3 */}
     <div className="flex flex-wrap justify-center gap-7">
-      {withAlternatingHues(rowTools).map((s) => (
+       {withAlternatingHues(rowStack).map((s) => (
         <SkillBadge key={s.label} {...s} />
       ))}
     </div>
@@ -990,7 +789,7 @@ const items = [
 
     {/* Row 4 */}
     <div className="flex flex-wrap justify-center gap-7">
-      {withAlternatingHues(rowAEC).map((s) => (
+      {withAlternatingHues(rowTools).map((s) => (
         <SkillBadge key={s.label} {...s} />
       ))}
     </div>
@@ -1067,7 +866,7 @@ const items = [
   <footer className="mt-16 border-t border-neutral-800 pt-6">
     <nav className="flex flex-wrap justify-center gap-30 text-xl text-400 mb-5">
       <a href="#home" className="hover:text-amber-400">Home</a>
-      <a href="#journey" className="hover:text-amber-400">Journey</a>
+      <a href="#Experience" className="hover:text-amber-400">Experience</a>
       <a href="#projects" className="hover:text-amber-400">Projects</a>
       <a href="#Skills" className="hover:text-amber-400">Skills</a>
       <a href="#contact" className="hover:text-amber-400">Contact</a>
