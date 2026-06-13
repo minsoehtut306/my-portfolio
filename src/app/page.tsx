@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import ThemeToggle from "@/components/theme-toggle";
 
 
-// ---- Skills data helpers ----
+// --- Skills data helpers ---
 type Hue = "amber" | "sky";
 type Skill =
   | { label: string; kind: "devicon"; token: string; hue?: Hue }
