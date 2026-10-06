@@ -142,13 +142,14 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-const items = [
-  { href: "#home", label: "Home" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
-];
+    const items = [
+        { href: "#home", label: "Home" },
+        { href: "#experience", label: "Experience" },
+        { href: "#certifications", label: "Certifications" },
+        { href: "#projects", label: "Projects" },
+        { href: "#skills", label: "Skills" },
+        { href: "#contact", label: "Contact" },
+    ];
 
   return (
       <main className="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100 transition-colors duration-300">
@@ -322,7 +323,15 @@ const items = [
       {/* Timeline line (mobile: left, md+: center) */}
       <div className="absolute top-0 h-full w-[2px] bg-amber-400/25 left-6 md:left-1/2 md:-translate-x-1/2" />
 
-      {[
+        {[
+        {
+            type: "work",
+            title: "Kitchen Staff (Part-Time)",
+            place: "K Chicken Rototuna, Hamilton, New Zealand",
+            period: "Sep 2026 – Present",
+            details:
+                "Working in a fast-paced hospitality environment, supporting food preparation, cooking, kitchen operations, cleaning, teamwork, and food safety standards.",
+        },
         {
           type: "edu",
           title: "B.Sc (Computer Science)",
@@ -372,7 +381,7 @@ const items = [
         },
         {
           type: "work",
-          title: "Operation Director",
+            title: "Assistant Operation Director",
           place: "Myan Pyi Kyaw Kyar Co., Ltd, Myanmar",
           period: "2020 – 2022",
           details:
@@ -400,7 +409,7 @@ const items = [
       map((item, i) => {
         const isRight = i % 2 === 0;
         const skyAccent =
-          item.title === "Operation Director" || item.title === "Assistant BIM Technician";
+            item.title === "Assistant Operation Director" || item.title === "Assistant BIM Technician" || item.title === "Kitchen Staff (Part-Time)";
         return (
           <div
             key={i}
@@ -527,7 +536,73 @@ const items = [
       })}
     </div>
   </div>
-</section>
+          </section>
+          {/* CERTIFICATIONS */}
+          <section
+              id="certifications"
+              className="py-20 bg-white dark:bg-neutral-900 border-t border-neutral-400 dark:border-neutral-800"
+          >
+              <div className="max-w-6xl mx-auto px-6">
+                  <h2 className="text-3xl font-bold mb-4 text-center text-amber-400">
+                      Certifications
+                  </h2>
+
+                  <p className="max-w-3xl mx-auto text-center text-neutral-500 dark:text-neutral-400 mb-12">
+                      Professional certifications and technical training supporting my
+                      development in IT support, networking, systems administration, and cybersecurity.
+                  </p>
+
+                  {/* Main Google Certificate */}
+                  <div className="max-w-4xl mx-auto mb-10">
+                      <div className="group relative rounded-xl border border-neutral-400 bg-white/80 p-7
+                      dark:border-neutral-700 dark:bg-neutral-800/70
+                      hover:shadow-[0_0_24px_3px_rgba(56,189,248,0.20)]
+                      transition-shadow">
+
+                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                              <div>
+                                  <p className="text-sm font-semibold text-sky-400 mb-2">
+                                      Google Career Certificate
+                                  </p>
+
+                                  <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+                                      Google IT Support Professional Certificate
+                                  </h3>
+
+                                  <p className="mt-2 text-neutral-600 dark:text-neutral-300">
+                                      Google · Coursera
+                                  </p>
+
+                                  <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+                                      Completed September 2026
+                                  </p>
+                              </div>
+
+                              <a
+                                  href="https://coursera.org/share/739918eee6b17ec07de8d5fd3ac75b05"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-5 py-2.5 rounded-lg bg-sky-500/90 hover:bg-sky-400
+                       text-neutral-900 font-medium transition whitespace-nowrap"
+                              >
+                                  Verify Certificate →
+                              </a>
+                          </div>
+
+                          <div className="mt-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+
+                          <div className="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-neutral-700 dark:text-neutral-300">
+                              <div>✓ Technical Support Fundamentals</div>
+                              <div>✓ Computer Networking</div>
+                              <div>✓ Operating Systems</div>
+                              <div>✓ System Administration & IT Infrastructure</div>
+                              <div>✓ IT Security</div>
+                              <div>✓ Accelerate Your Job Search with AI</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
 
 {/* PROJECTS */}
 <section
